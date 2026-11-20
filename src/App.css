@@ -1,23 +1,27 @@
 .container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     width: 700px;
     height: 300px;
+    justify-content: space-between;
 }
 
-.container > * {
+.item {
     width: 100px;
     height: 100px;
-    border-radius: 50%;
     background-color: #DAA520;
+    border-radius: 50%;
 }
 
-.container > :nth-child(2),
-.container > :nth-child(4) {
+.item:nth-child(1),
+.item:nth-child(5) {
+    align-self: flex-start;
+}
+
+.item:nth-child(2),
+.item:nth-child(4) {
     align-self: center;
 }
 
-.container > :nth-child(3) {
+.item:nth-child(3) {
     align-self: flex-end;
 }
